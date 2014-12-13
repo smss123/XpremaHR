@@ -1,0 +1,19 @@
+﻿EmpID رقم الموظف
+EmpName اسم الموظف
+Address العنوان
+MobileNo رقم الهاتف
+Email الايميل
+BloodGroup فصيلة الدم
+Department القسم/الادارة
+Designation الرتبة الوظيفية
+DateofJoining تاريخ التعين
+Salary الراتب الاساسي
+BasicWorkingTime عدد ساعات العمل الاساسية
+Bday تاريخ الميلاد
+Nationalty الجنسية
+nationaltyID رقم الهوية
+educlass المرحلة التعليمية
+univercitydgree مستوي الشهادة دكتورة دبلوم ..الخ
+specialization التخصص
+Empcategory الفئة موظفين متدربين ...الخ
+status الحالة في السيستم معطل ولا نشط ؟

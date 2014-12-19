@@ -9,7 +9,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [EmpInfo].[Vacations](
-	[EmpNumber] [int] NULL,
+	[ID] [int] NULL,
 	[Start_Date] [date] NULL,
 	[End_date] [date] NULL,
 	[Vacation_type] [nchar](200) NULL

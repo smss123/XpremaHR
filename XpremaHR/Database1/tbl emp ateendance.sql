@@ -1,7 +1,7 @@
 USE [XpremaHR]
 GO
 
-/****** Object:  Table [EmpInfo].[EmployeeAttendance]    Script Date: 12/20/2014 00:05:32 ******/
+/****** Object:  Table [EmpInfo].[EmployeeAttendance]    Script Date: 12/20/2014 00:08:50 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -12,14 +12,14 @@ SET ANSI_PADDING ON
 GO
 
 CREATE TABLE [EmpInfo].[EmployeeAttendance](
-	[WorkingDate] [nchar](30) NULL,
-	[ID] [nchar](30) NULL,
-	[EmployeeName] [varchar](100) NULL,
-	[BasicWorkingTime] [nchar](10) NULL,
-	[InTime] [nchar](30) NULL,
-	[OutTime] [nchar](30) NULL,
-	[Overtime] [nchar](10) NULL,
-	[Status] [nchar](5) NULL
+	[WorkingDate] [date] NULL,
+	[ID] [int] NULL,
+	[EmployeeName] [varchar](200) NULL,
+	[BasicWorkingTime] [nvarchar](50) NULL,
+	[InTime] [time](7) NULL,
+	[OutTime] [time](7) NULL,
+	[Overtime] [time](7) NULL,
+	[Status] [nvarchar](50) NULL
 ) ON [PRIMARY]
 
 GO

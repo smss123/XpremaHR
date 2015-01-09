@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="XpremaHR" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SAMER\SQL2008;Initial Catalog=XpremaHR;Integrated Security=True" SettingsObjectName="XpremaDataLayer.Properties.Settings" SettingsPropertyName="XpremaHRConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="Accountant.Account" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Account_AccountDaily" Member="AccountDailies" ThisKey="ID" OtherKey="AccountID" Type="AccountDaily" />
+      <Association Name="Account_Expenss" Member="Expensses" ThisKey="ID" OtherKey="AccountID" Type="Expenss" />
+      <Association Name="AccountCategory_Account" Member="AccountCategory" ThisKey="CategoryID" OtherKey="ID" Type="AccountCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Security.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="EmployeeBasicInfo_User" Member="EmployeeBasicInfo" ThisKey="EmployeeID" OtherKey="SerialNumber" Type="EmployeeBasicInfo" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="City_User" Member="City" ThisKey="CountryID" OtherKey="id" Type="City" IsForeignKey="true" />
+      <Association Name="UserGroup_User" Member="UserGroup" ThisKey="GroupID" OtherKey="ID" Type="UserGroup" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="Accountant.AccountCategory" Member="AccountCategories">
+    <Type Name="AccountCategory">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountCategoryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="AccountCategory_Account" Member="Accounts" ThisKey="ID" OtherKey="CategoryID" Type="Account" />
+    </Type>
+  </Table>
+  <Table Name="Accountant.AccountDaily" Member="AccountDailies">
+    <Type Name="AccountDaily">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalIn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalOut" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DateOfProcess" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="CommandArg" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Account_AccountDaily" Member="Account" ThisKey="AccountID" OtherKey="ID" Type="Account" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Accountant.Expensses" Member="Expensses">
+    <Type Name="Expenss">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExpenssesName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="AccountID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Expenss_ExpenssesMovment" Member="ExpenssesMovments" ThisKey="ID" OtherKey="ExpenssesID" Type="ExpenssesMovment" />
+      <Association Name="Account_Expenss" Member="Account" ThisKey="AccountID" OtherKey="ID" Type="Account" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Accountant.ExpenssesMovment" Member="ExpenssesMovments">
+    <Type Name="ExpenssesMovment">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExpenssesID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DateOfProcess" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Expenss_ExpenssesMovment" Member="Expenss" ThisKey="ExpenssesID" OtherKey="ID" Type="Expenss" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="EmpInfo.EmployeeBasicInfo" Member="EmployeeBasicInfos">
+    <Type Name="EmployeeBasicInfo">
+      <Column Name="SerialNumber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmpNumber" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="EmpName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NChar(60)" CanBeNull="true" />
+      <Column Name="BloodGroup" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Nationalty" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="nationaltyID" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JobID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HereDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="EmployeeBasicInfo_User" Member="Users" ThisKey="SerialNumber" OtherKey="EmployeeID" Type="User" />
+      <Association Name="Job_EmployeeBasicInfo" Member="Job" ThisKey="JobID" OtherKey="ID" Type="Job" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="EmpInfo.Job" Member="Jobs">
+    <Type Name="Job">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JobName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JobDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Job_EmployeeBasicInfo" Member="EmployeeBasicInfos" ThisKey="ID" OtherKey="JobID" Type="EmployeeBasicInfo" />
+      <Association Name="JobGroup_Job" Member="JobGroup" ThisKey="GroupID" OtherKey="ID" Type="JobGroup" IsForeignKey="true" DeleteRule="SET DEFAULT" />
+    </Type>
+  </Table>
+  <Table Name="EmpInfo.JobGroup" Member="JobGroups">
+    <Type Name="JobGroup">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JobGroupName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JobGroupDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="JobGroup_Job" Member="Jobs" ThisKey="ID" OtherKey="GroupID" Type="Job" />
+    </Type>
+  </Table>
+  <Table Name="EmpInfo.SalaryItem" Member="SalaryItems">
+    <Type Name="SalaryItem">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SalaryItem" Member="SalaryItem1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SalaryItemDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="SelaryDirection" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[_SerialNumber]" Member="_SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="EmpInfo.SalaryProfile" Member="SalaryProfiles">
+    <Type Name="SalaryProfile">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SalaryItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[_SerialNumber]" Member="_SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="localize.City" Member="Cities">
+    <Type Name="City">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="counrtyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="City_User" Member="Users" ThisKey="id" OtherKey="CountryID" Type="User" />
+      <Association Name="Country_City" Member="Country" ThisKey="counrtyID" OtherKey="ID" Type="Country" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="localize.Country" Member="Countries">
+    <Type Name="Country">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SerialNumber" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Country_City" Member="Cities" ThisKey="ID" OtherKey="counrtyID" Type="City" />
+    </Type>
+  </Table>
+  <Table Name="Security.GroupPermession" Member="GroupPermessions">
+    <Type Name="GroupPermession">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PermessionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ValueX" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AlternateValue" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="SystemPermession_GroupPermession" Member="SystemPermession" ThisKey="PermessionID" OtherKey="ID" Type="SystemPermession" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="UserGroup_GroupPermession" Member="UserGroup" ThisKey="GroupID" OtherKey="ID" Type="UserGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Security.SystemPermession" Member="SystemPermessions">
+    <Type Name="SystemPermession">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PermessionName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PermessionDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PermessionType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="SystemPermession_GroupPermession" Member="GroupPermessions" ThisKey="ID" OtherKey="PermessionID" Type="GroupPermession" />
+    </Type>
+  </Table>
+  <Table Name="Security.UserGroup" Member="UserGroups">
+    <Type Name="UserGroup">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GroupDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="UserGroup_User" Member="Users" ThisKey="ID" OtherKey="GroupID" Type="User" />
+      <Association Name="UserGroup_GroupPermession" Member="GroupPermessions" ThisKey="ID" OtherKey="GroupID" Type="GroupPermession" />
+    </Type>
+  </Table>
+</Database>

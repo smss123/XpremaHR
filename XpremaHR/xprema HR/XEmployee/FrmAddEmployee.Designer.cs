@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem5 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem6 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem7 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem8 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem9 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem10 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem11 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem12 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem13 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem14 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem15 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem16 = new Telerik.WinControls.UI.RadListDataItem();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
@@ -147,7 +146,7 @@
             // 
             this.txtadress.Location = new System.Drawing.Point(421, 71);
             this.txtadress.Name = "txtadress";
-            this.txtadress.Size = new System.Drawing.Size(209, 20);
+            this.txtadress.Size = new System.Drawing.Size(219, 20);
             this.txtadress.TabIndex = 11;
             // 
             // radLabel2
@@ -284,7 +283,7 @@
             // 
             this.txtdateofjoin.Location = new System.Drawing.Point(421, 35);
             this.txtdateofjoin.Name = "txtdateofjoin";
-            this.txtdateofjoin.Size = new System.Drawing.Size(209, 20);
+            this.txtdateofjoin.Size = new System.Drawing.Size(219, 20);
             this.txtdateofjoin.TabIndex = 16;
             this.txtdateofjoin.TabStop = false;
             this.txtdateofjoin.Text = "Saturday, January 10, 2015";
@@ -320,33 +319,30 @@
             // 
             // txtbloodgrp
             // 
-            radListDataItem1.Text = "O−";
-            radListDataItem1.TextWrap = true;
-            radListDataItem2.Text = "O+";
-            radListDataItem2.TextWrap = true;
-            radListDataItem3.Text = "A−";
-            radListDataItem3.TextWrap = true;
-            radListDataItem4.Text = "ListItem 4";
-            radListDataItem4.TextWrap = true;
-            radListDataItem5.Text = "A+";
-            radListDataItem5.TextWrap = true;
-            radListDataItem6.Text = "B−";
-            radListDataItem6.TextWrap = true;
-            radListDataItem7.Text = "B+";
-            radListDataItem7.TextWrap = true;
-            radListDataItem8.Text = "AB−";
-            radListDataItem8.TextWrap = true;
-            radListDataItem9.Text = "AB+";
+            radListDataItem9.Text = "O−";
             radListDataItem9.TextWrap = true;
-            this.txtbloodgrp.Items.Add(radListDataItem1);
-            this.txtbloodgrp.Items.Add(radListDataItem2);
-            this.txtbloodgrp.Items.Add(radListDataItem3);
-            this.txtbloodgrp.Items.Add(radListDataItem4);
-            this.txtbloodgrp.Items.Add(radListDataItem5);
-            this.txtbloodgrp.Items.Add(radListDataItem6);
-            this.txtbloodgrp.Items.Add(radListDataItem7);
-            this.txtbloodgrp.Items.Add(radListDataItem8);
+            radListDataItem10.Text = "O+";
+            radListDataItem10.TextWrap = true;
+            radListDataItem11.Text = "A−";
+            radListDataItem11.TextWrap = true;
+            radListDataItem12.Text = "A+";
+            radListDataItem12.TextWrap = true;
+            radListDataItem13.Text = "B−";
+            radListDataItem13.TextWrap = true;
+            radListDataItem14.Text = "B+";
+            radListDataItem14.TextWrap = true;
+            radListDataItem15.Text = "AB−";
+            radListDataItem15.TextWrap = true;
+            radListDataItem16.Text = "AB+";
+            radListDataItem16.TextWrap = true;
             this.txtbloodgrp.Items.Add(radListDataItem9);
+            this.txtbloodgrp.Items.Add(radListDataItem10);
+            this.txtbloodgrp.Items.Add(radListDataItem11);
+            this.txtbloodgrp.Items.Add(radListDataItem12);
+            this.txtbloodgrp.Items.Add(radListDataItem13);
+            this.txtbloodgrp.Items.Add(radListDataItem14);
+            this.txtbloodgrp.Items.Add(radListDataItem15);
+            this.txtbloodgrp.Items.Add(radListDataItem16);
             this.txtbloodgrp.Location = new System.Drawing.Point(423, 135);
             this.txtbloodgrp.Name = "txtbloodgrp";
             this.txtbloodgrp.Size = new System.Drawing.Size(217, 20);

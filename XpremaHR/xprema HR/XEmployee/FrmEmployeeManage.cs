@@ -20,5 +20,10 @@ namespace xprema_HR.XEmployee
         {
 
         }
+
+        private void Addbtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

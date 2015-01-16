@@ -1,26 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using Telerik.WinControls;
 
 namespace xprema_HR.XEmployee
 {
-    public partial class FrmEmployeeEdit : Telerik.WinControls.UI.RadForm
+    public partial class empeductrl : UserControl
     {
-        public FrmEmployeeEdit()
+        public empeductrl()
         {
             InitializeComponent();
         }
-
-        private void FrmEmployeeEdit_Load(object sender, EventArgs e)
-        {
-
-        }
-
-    
     }
 }

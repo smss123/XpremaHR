@@ -20,5 +20,10 @@ namespace xprema_HR.XEmployee
         {
 
         }
+
+        private void FrmAddEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

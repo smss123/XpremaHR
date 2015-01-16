@@ -178,9 +178,9 @@
             this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.radLabel2.Location = new System.Drawing.Point(5, 79);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(76, 18);
+            this.radLabel2.Size = new System.Drawing.Size(73, 18);
             this.radLabel2.TabIndex = 13;
-            this.radLabel2.Text = "Office phone :";
+            this.radLabel2.Text = "Relationship :";
             // 
             // txtroficephone
             // 

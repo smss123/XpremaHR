@@ -39,11 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountCommands\AccountCategoryCommand.cs" />
+    <Compile Include="AccountCommands\AccountCommand.cs" />
+    <Compile Include="CountryCommands\CountryCommands.cs" />
     <Compile Include="db.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>db.dbml</DependentUpon>
     </Compile>
+    <Compile Include="ExpenssCommands\ExpenssCommand.cs" />
+    <Compile Include="ExpenssCommands\ExpenssesMovmentCommands.cs" />
     <Compile Include="JobCommand\JobGroupCommand.cs" />
     <Compile Include="JobCommand\Job_Command.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,8 +57,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SalaryItemCommands\SalaryItemCommand.cs" />
+    <Compile Include="SalaryProfileCommands\SalaryProfileCommand.cs" />
     <Compile Include="SystemBase.cs" />
+    <Compile Include="SystemPermessionCommand\SystemPermessionCommand.cs" />
+    <Compile Include="UserCommands\UserCMD.cs" />
     <Compile Include="UserCommands\UserGroupCommand.cs" />
+    <Compile Include="UserCommands\UserGroupPermissions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

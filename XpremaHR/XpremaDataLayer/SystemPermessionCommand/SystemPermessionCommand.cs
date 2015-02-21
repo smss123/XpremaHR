@@ -17,7 +17,7 @@ namespace XpremaDataLayer.SystemPermessionCommand
         {
             db.SystemPermessions.InsertOnSubmit(CP);
             db.SubmitChanges();
-            OnCommandChange("New System Permession ", CP.PermessionName + " has been Saved");// fired Event on Form
+            OnCommandChange("New System Permession ", CP.SystemPermession1 + " has been Saved");// fired Event on Form
         }
         /// <summary>
         /// To Edit System Permession  , in any error here to save to excption handler wel be fired
@@ -26,11 +26,15 @@ namespace XpremaDataLayer.SystemPermessionCommand
         public static void EditSystemPermession(SystemPermession CP)
         {
             var q = db.SystemPermessions.Where(p => p.ID == CP.ID).SingleOrDefault();
-            q.PermessionName = CP.PermessionName;
-            q.PermessionDescription = CP.PermessionDescription;
-            q.PermessionType = CP.PermessionType;
+
+            q.SystemPermession1 = CP.SystemPermession1;
+            q.ObjectName = CP.ObjectName;
+            q.propertyName = CP.propertyName;
+            q.Description = CP.Description;
+            q.SerialNumber = CP.SerialNumber;
+
             db.SubmitChanges();
-            OnCommandChange("Edit System Permession", CP.PermessionName + " has been Edited");// fired Event on Form
+            OnCommandChange("Edit System Permession", CP.SystemPermession1 + " has been Edited");// fired Event on Form
         }
 
         /// <summary>
@@ -42,7 +46,7 @@ namespace XpremaDataLayer.SystemPermessionCommand
             var q = db.SystemPermessions.Where(p => p.ID == id).SingleOrDefault();
             db.SystemPermessions.DeleteOnSubmit(q);
             db.SubmitChanges();
-            OnCommandChange("Delete System Permession", q.PermessionName + " has been Deleted");// fired Event on Form
+            OnCommandChange("Delete System Permession", q.SystemPermession1 + " has been Deleted");// fired Event on Form
         }
         public static List<SystemPermession> GetAllSystemPermessions()
         {

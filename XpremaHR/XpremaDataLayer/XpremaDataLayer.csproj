@@ -47,10 +47,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db.dbml</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeCommand\EmployeeAttachmentCMD.cs" />
+    <Compile Include="EmployeeCommand\EmployeeBasicInfoCMD.cs" />
+    <Compile Include="EmployeeCommand\employeeFamaliyCMD.cs" />
+    <Compile Include="EstimateCommand\employeeEstimatedProfileCMD.cs" />
+    <Compile Include="EstimateCommand\EstimatedPointCMD.cs" />
     <Compile Include="ExpenssCommands\ExpenssCommand.cs" />
     <Compile Include="ExpenssCommands\ExpenssesMovmentCommands.cs" />
     <Compile Include="JobCommand\JobGroupCommand.cs" />
     <Compile Include="JobCommand\Job_Command.cs" />
+    <Compile Include="ProcedureCommands\ProcedureHerCMD.cs" />
+    <Compile Include="ProcedureCommands\ProcedureProfileCMD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

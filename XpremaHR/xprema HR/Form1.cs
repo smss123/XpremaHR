@@ -16,5 +16,10 @@ namespace xprema_HR
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //test commit :)
+        }
     }
 }

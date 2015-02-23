@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="AccountCommands\AccountCategoryCommand.cs" />
     <Compile Include="AccountCommands\AccountCommand.cs" />
+    <Compile Include="AccountCommands\AccountDailyCMD.cs" />
     <Compile Include="CountryCommands\CountryCommands.cs" />
     <Compile Include="db.designer.cs">
       <AutoGen>True</AutoGen>

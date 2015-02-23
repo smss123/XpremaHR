@@ -112,6 +112,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XAccounts\FrmAccountTree.cs" />
+    <Compile Include="XAccounts\FrmAccountTree.Designer.cs">
+      <DependentUpon>FrmAccountTree.cs</DependentUpon>
+    </Compile>
     <Compile Include="XJob\frmAddJob.cs">
       <SubType>Form</SubType>
     </Compile>

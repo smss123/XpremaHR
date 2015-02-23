@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddUser));
-            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
+          
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
@@ -185,7 +185,7 @@
 
         #endregion
 
-        private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
+       
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadTextBox txtpasswd;
         private Telerik.WinControls.UI.RadTextBox txtusername;

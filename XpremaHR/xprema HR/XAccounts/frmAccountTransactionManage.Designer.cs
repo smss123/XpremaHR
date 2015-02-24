@@ -1,4 +1,6 @@
-﻿namespace xprema_HR.XAccounts
+﻿using System.Data.Linq;
+
+namespace xprema_HR.XAccounts
 {
     partial class frmAccountTransactionManage
     {
@@ -60,7 +62,7 @@
             // 
             // accountDailiesBindingSource
             // 
-            this.accountDailiesBindingSource.DataSource = typeof(System.Data.Linq.EntitySet<XpremaDataLayer.AccountDaily>);
+            this.accountDailiesBindingSource.DataSource = typeof(EntitySet<XpremaDataLayer.AccountDaily>);
             // 
             // accountDailiesBindingNavigator
             // 

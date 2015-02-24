@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -91,12 +92,6 @@
     <Compile Include="XAccounts\frmAddAcount.Designer.cs">
       <DependentUpon>frmAddAcount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Xsecurity\FrmAddUser.cs">
-      <SubType>form</SubType>
-    </Compile>
-    <Compile Include="Xsecurity\FrmAddUser.Designer.cs">
-      <DependentUpon>FrmAddUser.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -114,9 +109,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XAccounts\frmAddAcount.resx">
       <DependentUpon>frmAddAcount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Xsecurity\FrmAddUser.resx">
-      <DependentUpon>FrmAddUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\XpremaDataLayer.Account.datasource" />
     <None Include="Properties\DataSources\XpremaDataLayer.AccountCategory.datasource" />

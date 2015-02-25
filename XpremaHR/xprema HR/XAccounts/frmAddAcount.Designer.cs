@@ -41,6 +41,7 @@
             this.categoryIDTextBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.accountCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnOky = new Telerik.WinControls.UI.RadButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             accountNameLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
             categoryIDLabel = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoryIDTextBox.EditorControl.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountCategoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOky)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             accountNameLabel.AutoSize = true;
             accountNameLabel.Location = new System.Drawing.Point(33, 15);
             accountNameLabel.Name = "accountNameLabel";
-            accountNameLabel.Size = new System.Drawing.Size(81, 13);
+            accountNameLabel.Size = new System.Drawing.Size(80, 13);
             accountNameLabel.TabIndex = 1;
             accountNameLabel.Text = "Account Name:";
             // 
@@ -69,7 +71,7 @@
             descriptionLabel.AutoSize = true;
             descriptionLabel.Location = new System.Drawing.Point(51, 41);
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(63, 13);
+            descriptionLabel.Size = new System.Drawing.Size(64, 13);
             descriptionLabel.TabIndex = 2;
             descriptionLabel.Text = "Description:";
             // 
@@ -78,7 +80,7 @@
             categoryIDLabel.AutoSize = true;
             categoryIDLabel.Location = new System.Drawing.Point(59, 105);
             categoryIDLabel.Name = "categoryIDLabel";
-            categoryIDLabel.Size = new System.Drawing.Size(55, 13);
+            categoryIDLabel.Size = new System.Drawing.Size(59, 13);
             categoryIDLabel.TabIndex = 4;
             categoryIDLabel.Text = "Category :";
             // 
@@ -178,6 +180,10 @@
             this.btnOky.Text = "Oky";
             this.btnOky.ThemeName = "Office2013Light";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmAddAcount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,6 +213,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoryIDTextBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountCategoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOky)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -221,5 +228,6 @@
         private Telerik.WinControls.UI.RadMultiColumnComboBox categoryIDTextBox;
         private System.Windows.Forms.BindingSource accountCategoryBindingSource;
         private Telerik.WinControls.UI.RadButton btnOky;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

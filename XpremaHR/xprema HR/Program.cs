@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using xprema_HR.XEpenses;
 
 namespace xprema_HR
 {
@@ -16,7 +17,7 @@ namespace xprema_HR
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmAddExpensses());
         }
     }
 }

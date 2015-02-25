@@ -68,6 +68,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XAccounts\frmAccountDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XAccounts\frmAccountDaily.Designer.cs">
+      <DependentUpon>frmAccountDaily.cs</DependentUpon>
+    </Compile>
     <Compile Include="XAccounts\frmAccountManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,12 @@
     </Compile>
     <Compile Include="XAccounts\frmAddAcount.Designer.cs">
       <DependentUpon>frmAddAcount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XAccounts\frmEditAccountDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XAccounts\frmEditAccountDaily.Designer.cs">
+      <DependentUpon>frmEditAccountDaily.cs</DependentUpon>
     </Compile>
     <Compile Include="XEpenses\FrmAddExpensses.cs" />
     <Compile Include="XEpenses\FrmAddExpensses.Designer.cs">
@@ -125,6 +137,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="XAccounts\frmAccountDaily.resx">
+      <DependentUpon>frmAccountDaily.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XAccounts\frmAccountManagement.resx">
       <DependentUpon>frmAccountManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XAccounts\frmAddAcount.resx">
       <DependentUpon>frmAddAcount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XAccounts\frmEditAccountDaily.resx">
+      <DependentUpon>frmEditAccountDaily.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XEpenses\FrmAddExpensses.resx">
       <DependentUpon>FrmAddExpensses.cs</DependentUpon>

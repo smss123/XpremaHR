@@ -11,22 +11,16 @@ using Telerik.WinControls.UI;
 
 namespace xprema_HR.XAccounts
 {
-    public partial class frmAccountManagement : RadForm
+    public partial class frmEditAccountDaily : RadForm
     {
-        public frmAccountManagement()
+        public frmEditAccountDaily()
         {
             InitializeComponent();
         }
 
-        private void frmAccountManagement_Load(object sender, EventArgs e)
+        private void frmEditAccountDaily_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnNewAccount_Click(object sender, EventArgs e)
-        {
-            frmAddAcount frm = new frmAddAcount();
-            frm.ShowDialog();
         }
     }
 }

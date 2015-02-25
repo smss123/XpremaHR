@@ -104,7 +104,7 @@
             gridViewCommandColumn2.EnableExpressionEditor = false;
             gridViewCommandColumn2.HeaderText = "Edit";
             gridViewCommandColumn2.Name = "btnEdit";
-            gridViewCommandColumn2.Width = 58;
+            gridViewCommandColumn2.Width = 59;
             this.accountDataGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewDecimalColumn1,
             gridViewTextBoxColumn1,
@@ -140,6 +140,7 @@
             this.btnNewAccount.Name = "btnNewAccount";
             this.btnNewAccount.Size = new System.Drawing.Size(99, 22);
             this.btnNewAccount.Text = "New Account";
+            this.btnNewAccount.Click += new System.EventHandler(this.btnNewAccount_Click);
             // 
             // btnRefresh
             // 

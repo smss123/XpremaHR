@@ -28,29 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
-            this.radTreeView1 = new Telerik.WinControls.UI.RadTreeView();
+            this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
             this.BtnCollapse = new System.Windows.Forms.Button();
             this.BtnExpand = new System.Windows.Forms.Button();
+            this.radTreeView1 = new Telerik.WinControls.UI.RadTreeView();
+            this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
             this.txtcridet = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtAccountName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.EPAccountName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.EPDescription = new System.Windows.Forms.ErrorProvider(this.components);
+            this.EPCridet = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
-            this.radGroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
-            this.radGroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
+            this.radGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radTreeView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
+            this.radGroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EPAccountName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPDescription)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPCridet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +72,14 @@
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "Account Details";
             // 
+            // radGridView1
+            // 
+            this.radGridView1.Location = new System.Drawing.Point(6, 22);
+            this.radGridView1.Name = "radGridView1";
+            this.radGridView1.Size = new System.Drawing.Size(564, 399);
+            this.radGridView1.TabIndex = 0;
+            this.radGridView1.Text = "radGridView1";
+            // 
             // radGroupBox2
             // 
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
@@ -77,39 +92,6 @@
             this.radGroupBox2.Size = new System.Drawing.Size(341, 306);
             this.radGroupBox2.TabIndex = 1;
             this.radGroupBox2.Text = "__";
-            // 
-            // radGroupBox3
-            // 
-            this.radGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox3.Controls.Add(this.txtcridet);
-            this.radGroupBox3.Controls.Add(this.txtDescription);
-            this.radGroupBox3.Controls.Add(this.txtAccountName);
-            this.radGroupBox3.Controls.Add(this.label3);
-            this.radGroupBox3.Controls.Add(this.label2);
-            this.radGroupBox3.Controls.Add(this.label1);
-            this.radGroupBox3.HeaderText = "Details";
-            this.radGroupBox3.Location = new System.Drawing.Point(12, 329);
-            this.radGroupBox3.Name = "radGroupBox3";
-            this.radGroupBox3.Size = new System.Drawing.Size(341, 105);
-            this.radGroupBox3.TabIndex = 2;
-            this.radGroupBox3.Text = "Details";
-            // 
-            // radGridView1
-            // 
-            this.radGridView1.Location = new System.Drawing.Point(6, 22);
-            this.radGridView1.Name = "radGridView1";
-            this.radGridView1.Size = new System.Drawing.Size(564, 399);
-            this.radGridView1.TabIndex = 0;
-            this.radGridView1.Text = "radGridView1";
-            // 
-            // radTreeView1
-            // 
-            this.radTreeView1.Location = new System.Drawing.Point(5, 22);
-            this.radTreeView1.Name = "radTreeView1";
-            this.radTreeView1.Size = new System.Drawing.Size(313, 245);
-            this.radTreeView1.SpacingBetweenNodes = -1;
-            this.radTreeView1.TabIndex = 0;
-            this.radTreeView1.Text = "radTreeView1";
             // 
             // BtnCollapse
             // 
@@ -129,12 +111,38 @@
             this.BtnExpand.Text = "Expaned All";
             this.BtnExpand.UseVisualStyleBackColor = true;
             // 
+            // radTreeView1
+            // 
+            this.radTreeView1.Location = new System.Drawing.Point(5, 22);
+            this.radTreeView1.Name = "radTreeView1";
+            this.radTreeView1.Size = new System.Drawing.Size(313, 245);
+            this.radTreeView1.SpacingBetweenNodes = -1;
+            this.radTreeView1.TabIndex = 0;
+            this.radTreeView1.Text = "radTreeView1";
+            // 
+            // radGroupBox3
+            // 
+            this.radGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox3.Controls.Add(this.txtcridet);
+            this.radGroupBox3.Controls.Add(this.txtDescription);
+            this.radGroupBox3.Controls.Add(this.txtAccountName);
+            this.radGroupBox3.Controls.Add(this.label3);
+            this.radGroupBox3.Controls.Add(this.label2);
+            this.radGroupBox3.Controls.Add(this.label1);
+            this.radGroupBox3.HeaderText = "Details";
+            this.radGroupBox3.Location = new System.Drawing.Point(12, 329);
+            this.radGroupBox3.Name = "radGroupBox3";
+            this.radGroupBox3.Size = new System.Drawing.Size(341, 105);
+            this.radGroupBox3.TabIndex = 2;
+            this.radGroupBox3.Text = "Details";
+            // 
             // txtcridet
             // 
             this.txtcridet.Location = new System.Drawing.Point(101, 68);
             this.txtcridet.Name = "txtcridet";
             this.txtcridet.Size = new System.Drawing.Size(227, 20);
             this.txtcridet.TabIndex = 11;
+            this.txtcridet.Leave += new System.EventHandler(this.TextBox_Leave_2);
             // 
             // txtDescription
             // 
@@ -142,6 +150,7 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(227, 20);
             this.txtDescription.TabIndex = 10;
+            this.txtDescription.Leave += new System.EventHandler(this.TextBox_Leave_1);
             // 
             // txtAccountName
             // 
@@ -149,6 +158,7 @@
             this.txtAccountName.Name = "txtAccountName";
             this.txtAccountName.Size = new System.Drawing.Size(227, 20);
             this.txtAccountName.TabIndex = 9;
+            this.txtAccountName.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // label3
             // 
@@ -177,6 +187,18 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Account Name :";
             // 
+            // EPAccountName
+            // 
+            this.EPAccountName.ContainerControl = this;
+            // 
+            // EPDescription
+            // 
+            this.EPDescription.ContainerControl = this;
+            // 
+            // EPCridet
+            // 
+            this.EPCridet.ContainerControl = this;
+            // 
             // FrmAccountTree
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,14 +216,17 @@
             this.ThemeName = "Office2013Light";
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
             this.radGroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radTreeView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).EndInit();
             this.radGroupBox3.ResumeLayout(false);
             this.radGroupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTreeView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPAccountName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPDescription)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPCridet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -223,5 +248,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider EPAccountName;
+        private System.Windows.Forms.ErrorProvider EPDescription;
+        private System.Windows.Forms.ErrorProvider EPCridet;
     }
 }

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAccountDaily));
             this.fromAccount = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.radMultiColumnComboBox2 = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -38,6 +40,7 @@
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
+            this.EPDescription = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.fromAccount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fromAccount.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fromAccount.EditorControl.MasterTemplate)).BeginInit();
@@ -53,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPDescription)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,6 +145,7 @@
             this.radTextBox1.Size = new System.Drawing.Size(222, 118);
             this.radTextBox1.TabIndex = 3;
             this.radTextBox1.ThemeName = "Office2013Light";
+            this.radTextBox1.Leave += new System.EventHandler(this.radTextBox1_Leave);
             // 
             // radLabel1
             // 
@@ -199,6 +204,7 @@
             this.radGroupBox1.TabIndex = 5;
             this.radGroupBox1.Text = "New Double Entry";
             this.radGroupBox1.ThemeName = "Office2013Light";
+            this.radGroupBox1.Click += new System.EventHandler(this.radGroupBox1_Click);
             // 
             // radButton1
             // 
@@ -208,6 +214,12 @@
             this.radButton1.TabIndex = 6;
             this.radButton1.Text = "Oky";
             this.radButton1.ThemeName = "Office2013Light";
+            this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
+            // 
+            // EPDescription
+            // 
+            this.EPDescription.ContainerControl = this;
+            this.EPDescription.Icon = ((System.Drawing.Icon)(resources.GetObject("EPDescription.Icon")));
             // 
             // frmAccountDaily
             // 
@@ -245,6 +257,7 @@
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPDescription)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -262,5 +275,6 @@
         private Telerik.WinControls.UI.RadLabel radLabel4;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadButton radButton1;
+        private System.Windows.Forms.ErrorProvider EPDescription;
     }
 }

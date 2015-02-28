@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.fromAccount = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.ToAccount = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -38,6 +39,7 @@
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
+            this.EPDescription = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.fromAccount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fromAccount.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fromAccount.EditorControl.MasterTemplate)).BeginInit();
@@ -53,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPDescription)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +69,7 @@
             this.fromAccount.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
             this.fromAccount.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // fromAccount.NestedRadGridView
+            // 
             // 
             this.fromAccount.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.fromAccount.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -96,7 +99,7 @@
             this.ToAccount.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ToAccount.EditorControl.Location = new System.Drawing.Point(0, 0);
             // 
-            // ToAccount.NestedRadGridView
+            // 
             // 
             this.ToAccount.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.ToAccount.EditorControl.MasterTemplate.AllowCellContextMenu = false;
@@ -133,6 +136,7 @@
             this.radTextBox1.Size = new System.Drawing.Size(284, 141);
             this.radTextBox1.TabIndex = 3;
             this.radTextBox1.ThemeName = "Office2013Light";
+            this.radTextBox1.Leave += new System.EventHandler(this.radTextBox1_Leave);
             // 
             // radLabel4
             // 
@@ -197,6 +201,11 @@
             this.radButton1.TabIndex = 10;
             this.radButton1.Text = "Oky";
             this.radButton1.ThemeName = "Office2013Light";
+            this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
+            // 
+            // EPDescription
+            // 
+            this.EPDescription.ContainerControl = this;
             // 
             // frmEditAccountDaily
             // 
@@ -231,6 +240,7 @@
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPDescription)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -248,5 +258,6 @@
         private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadButton radButton1;
+        private System.Windows.Forms.ErrorProvider EPDescription;
     }
 }

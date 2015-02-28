@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAccountTree));
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
@@ -190,14 +191,17 @@
             // EPAccountName
             // 
             this.EPAccountName.ContainerControl = this;
+            this.EPAccountName.Icon = ((System.Drawing.Icon)(resources.GetObject("EPAccountName.Icon")));
             // 
             // EPDescription
             // 
             this.EPDescription.ContainerControl = this;
+            this.EPDescription.Icon = ((System.Drawing.Icon)(resources.GetObject("EPDescription.Icon")));
             // 
             // EPCridet
             // 
             this.EPCridet.ContainerControl = this;
+            this.EPCridet.Icon = ((System.Drawing.Icon)(resources.GetObject("EPCridet.Icon")));
             // 
             // FrmAccountTree
             // 

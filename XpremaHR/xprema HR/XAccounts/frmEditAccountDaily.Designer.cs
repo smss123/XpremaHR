@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditAccountDaily));
             this.fromAccount = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.ToAccount = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -206,6 +207,7 @@
             // EPDescription
             // 
             this.EPDescription.ContainerControl = this;
+            this.EPDescription.Icon = ((System.Drawing.Icon)(resources.GetObject("EPDescription.Icon")));
             // 
             // frmEditAccountDaily
             // 

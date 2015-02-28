@@ -104,27 +104,39 @@
     <Compile Include="XAccounts\frmEditAccountDaily.Designer.cs">
       <DependentUpon>frmEditAccountDaily.cs</DependentUpon>
     </Compile>
-    <Compile Include="XEpenses\FrmAddExpensses.cs" />
+    <Compile Include="XEpenses\FrmAddExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="XEpenses\FrmAddExpensses.Designer.cs">
       <DependentUpon>FrmAddExpensses.cs</DependentUpon>
     </Compile>
-    <Compile Include="XEpenses\frmAddExpenssesMovment.cs" />
+    <Compile Include="XEpenses\frmAddExpenssesMovment.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="XEpenses\frmAddExpenssesMovment.Designer.cs">
       <DependentUpon>frmAddExpenssesMovment.cs</DependentUpon>
     </Compile>
-    <Compile Include="XEpenses\FrmEditExpensses.cs" />
+    <Compile Include="XEpenses\FrmEditExpensses.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="XEpenses\FrmEditExpensses.Designer.cs">
       <DependentUpon>FrmEditExpensses.cs</DependentUpon>
     </Compile>
-    <Compile Include="XEpenses\frmEditExpenssesMovment.cs" />
+    <Compile Include="XEpenses\frmEditExpenssesMovment.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="XEpenses\frmEditExpenssesMovment.Designer.cs">
       <DependentUpon>frmEditExpenssesMovment.cs</DependentUpon>
     </Compile>
-    <Compile Include="XEpenses\FrmexpensesShow.cs" />
+    <Compile Include="XEpenses\FrmexpensesShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="XEpenses\FrmexpensesShow.Designer.cs">
       <DependentUpon>FrmexpensesShow.cs</DependentUpon>
     </Compile>
-    <Compile Include="XEpenses\frmExpenssesMovment.cs" />
+    <Compile Include="XEpenses\frmExpenssesMovment.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="XEpenses\frmExpenssesMovment.Designer.cs">
       <DependentUpon>frmExpenssesMovment.cs</DependentUpon>
     </Compile>
@@ -136,6 +148,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="XAccounts\frmAccountDaily.resx">
       <DependentUpon>frmAccountDaily.cs</DependentUpon>
@@ -145,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XAccounts\frmAccountTransactionManage.resx">
       <DependentUpon>frmAccountTransactionManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XAccounts\FrmAccountTree.resx">
+      <DependentUpon>FrmAccountTree.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XAccounts\frmAddAcount.resx">
       <DependentUpon>frmAddAcount.cs</DependentUpon>
@@ -205,6 +221,12 @@
       <Project>{de3b8c8b-d282-495b-a0fe-76b9b1b7c749}</Project>
       <Name>XpremaDataLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acept.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\err.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

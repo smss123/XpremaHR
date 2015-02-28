@@ -22,5 +22,40 @@ namespace xprema_HR.XAccounts
         {
 
         }
+        /// <summary>
+        /// This  error for account name 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void accountNameTextBox_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(accountNameTextBox.Text))
+            {
+                EPAccountName.Icon = Properties.Resources.err;
+                EPAccountName.SetError(accountNameTextBox, "Description valid ");
+
+            }
+            else
+            {
+                EPAccountName.Icon = Properties.Resources.acept;
+                EPAccountName.SetError(accountNameTextBox, "Ok");
+            }
+        }
+
+        private void btnOky_Click(object sender, EventArgs e)
+        {       
+            ///this for error acount name
+            if (string.IsNullOrEmpty(accountNameTextBox.Text))
+            {
+                EPAccountName.Icon = Properties.Resources.err;
+                EPAccountName.SetError(accountNameTextBox, "Description valid ");
+
+            }
+            else
+            {
+                EPAccountName.Icon = Properties.Resources.acept;
+                EPAccountName.SetError(accountNameTextBox, "Ok");
+            }
+        }
     }
 }

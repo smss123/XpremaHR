@@ -38,15 +38,17 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddExpenssesMovment));
             this.AddBtn = new Telerik.WinControls.UI.RadButton();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.AccountsComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.amountTextBox = new System.Windows.Forms.TextBox();
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.catograycmb = new Telerik.WinControls.UI.RadMultiColumnComboBox();
-            this.txtdescripe = new Telerik.WinControls.UI.RadTextBox();
             this.txtamount = new Telerik.WinControls.UI.RadTextBox();
+            this.txtdescripe = new Telerik.WinControls.UI.RadTextBox();
+            this.catograycmb = new Telerik.WinControls.UI.RadMultiColumnComboBox();
+            this.EPAmount = new System.Windows.Forms.ErrorProvider(this.components);
             descriptionLabel = new System.Windows.Forms.Label();
             amountLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
@@ -55,13 +57,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.AccountsComboBox.EditorControl.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtamount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdescripe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catograycmb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catograycmb.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catograycmb.EditorControl.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdescripe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtamount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
+            // 
+            // descriptionLabel
+            // 
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Location = new System.Drawing.Point(8, 66);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new System.Drawing.Size(64, 13);
+            descriptionLabel.TabIndex = 2;
+            descriptionLabel.Text = "Description:";
+            // 
+            // amountLabel
+            // 
+            amountLabel.AutoSize = true;
+            amountLabel.Location = new System.Drawing.Point(26, 31);
+            amountLabel.Name = "amountLabel";
+            amountLabel.Size = new System.Drawing.Size(48, 13);
+            amountLabel.TabIndex = 0;
+            amountLabel.Text = "Amount:";
             // 
             // AddBtn
             // 
@@ -74,24 +95,7 @@
             this.AddBtn.Text = "Add";
             this.AddBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddBtn.ThemeName = "Office2013Light";
-            // 
-            // descriptionLabel
-            // 
-            descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(8, 66);
-            descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(63, 13);
-            descriptionLabel.TabIndex = 2;
-            descriptionLabel.Text = "Description:";
-            // 
-            // amountLabel
-            // 
-            amountLabel.AutoSize = true;
-            amountLabel.Location = new System.Drawing.Point(26, 31);
-            amountLabel.Name = "amountLabel";
-            amountLabel.Size = new System.Drawing.Size(46, 13);
-            amountLabel.TabIndex = 0;
-            amountLabel.Text = "Amount:";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // descriptionTextBox
             // 
@@ -161,6 +165,27 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add";
+            // 
+            // txtamount
+            // 
+            this.txtamount.Location = new System.Drawing.Point(83, 28);
+            this.txtamount.Name = "txtamount";
+            this.txtamount.NullText = "Enter Amount";
+            this.txtamount.Size = new System.Drawing.Size(171, 21);
+            this.txtamount.TabIndex = 7;
+            this.txtamount.ThemeName = "Office2013Light";
+            this.txtamount.Leave += new System.EventHandler(this.txtamount_Leave);
+            // 
+            // txtdescripe
+            // 
+            this.txtdescripe.AutoSize = false;
+            this.txtdescripe.Location = new System.Drawing.Point(83, 63);
+            this.txtdescripe.Multiline = true;
+            this.txtdescripe.Name = "txtdescripe";
+            this.txtdescripe.NullText = "Enter Description (optional)";
+            this.txtdescripe.Size = new System.Drawing.Size(231, 117);
+            this.txtdescripe.TabIndex = 8;
+            this.txtdescripe.ThemeName = "Office2013Light";
             // 
             // catograycmb
             // 
@@ -235,25 +260,10 @@
             this.catograycmb.TabStop = false;
             this.catograycmb.ThemeName = "Office2013Light";
             // 
-            // txtdescripe
+            // EPAmount
             // 
-            this.txtdescripe.AutoSize = false;
-            this.txtdescripe.Location = new System.Drawing.Point(83, 63);
-            this.txtdescripe.Multiline = true;
-            this.txtdescripe.Name = "txtdescripe";
-            this.txtdescripe.NullText = "Enter Description (optional)";
-            this.txtdescripe.Size = new System.Drawing.Size(231, 117);
-            this.txtdescripe.TabIndex = 8;
-            this.txtdescripe.ThemeName = "Office2013Light";
-            // 
-            // txtamount
-            // 
-            this.txtamount.Location = new System.Drawing.Point(83, 28);
-            this.txtamount.Name = "txtamount";
-            this.txtamount.NullText = "Enter Amount";
-            this.txtamount.Size = new System.Drawing.Size(171, 21);
-            this.txtamount.TabIndex = 7;
-            this.txtamount.ThemeName = "Office2013Light";
+            this.EPAmount.ContainerControl = this;
+            this.EPAmount.Icon = ((System.Drawing.Icon)(resources.GetObject("EPAmount.Icon")));
             // 
             // frmAddExpenssesMovment
             // 
@@ -275,11 +285,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtamount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdescripe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.catograycmb.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.catograycmb.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.catograycmb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdescripe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtamount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -296,5 +307,6 @@
         private Telerik.WinControls.UI.RadMultiColumnComboBox catograycmb;
         private Telerik.WinControls.UI.RadTextBox txtdescripe;
         private Telerik.WinControls.UI.RadTextBox txtamount;
+        private System.Windows.Forms.ErrorProvider EPAmount;
     }
 }

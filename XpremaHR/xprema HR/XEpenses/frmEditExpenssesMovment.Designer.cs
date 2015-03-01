@@ -28,20 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label descriptionLabel;
             System.Windows.Forms.Label expenssesNameLabel;
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnupdate = new Telerik.WinControls.UI.RadButton();
             this.txtname = new Telerik.WinControls.UI.RadTextBox();
             this.txtdescripe = new Telerik.WinControls.UI.RadTextBox();
+            this.EPAmount = new System.Windows.Forms.ErrorProvider(this.components);
             descriptionLabel = new System.Windows.Forms.Label();
             expenssesNameLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnupdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdescripe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
+            // 
+            // descriptionLabel
+            // 
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Location = new System.Drawing.Point(8, 66);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new System.Drawing.Size(64, 13);
+            descriptionLabel.TabIndex = 2;
+            descriptionLabel.Text = "Description:";
+            // 
+            // expenssesNameLabel
+            // 
+            expenssesNameLabel.AutoSize = true;
+            expenssesNameLabel.Location = new System.Drawing.Point(26, 31);
+            expenssesNameLabel.Name = "expenssesNameLabel";
+            expenssesNameLabel.Size = new System.Drawing.Size(48, 13);
+            expenssesNameLabel.TabIndex = 0;
+            expenssesNameLabel.Text = "Amount:";
             // 
             // groupBox1
             // 
@@ -68,6 +89,7 @@
             this.btnupdate.TabIndex = 10;
             this.btnupdate.Text = "Update";
             this.btnupdate.ThemeName = "Office2013Light";
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // txtname
             // 
@@ -77,6 +99,7 @@
             this.txtname.Size = new System.Drawing.Size(213, 21);
             this.txtname.TabIndex = 8;
             this.txtname.ThemeName = "Office2013Light";
+            this.txtname.Leave += new System.EventHandler(this.txtname_Leave);
             // 
             // txtdescripe
             // 
@@ -89,23 +112,9 @@
             this.txtdescripe.TabIndex = 9;
             this.txtdescripe.ThemeName = "Office2013Light";
             // 
-            // descriptionLabel
+            // EPAmount
             // 
-            descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(8, 66);
-            descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(63, 13);
-            descriptionLabel.TabIndex = 2;
-            descriptionLabel.Text = "Description:";
-            // 
-            // expenssesNameLabel
-            // 
-            expenssesNameLabel.AutoSize = true;
-            expenssesNameLabel.Location = new System.Drawing.Point(26, 31);
-            expenssesNameLabel.Name = "expenssesNameLabel";
-            expenssesNameLabel.Size = new System.Drawing.Size(46, 13);
-            expenssesNameLabel.TabIndex = 0;
-            expenssesNameLabel.Text = "Amount:";
+            this.EPAmount.ContainerControl = this;
             // 
             // frmEditExpenssesMovment
             // 
@@ -125,6 +134,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnupdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdescripe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EPAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -136,5 +146,6 @@
         private Telerik.WinControls.UI.RadButton btnupdate;
         private Telerik.WinControls.UI.RadTextBox txtname;
         private Telerik.WinControls.UI.RadTextBox txtdescripe;
+        private System.Windows.Forms.ErrorProvider EPAmount;
     }
 }
